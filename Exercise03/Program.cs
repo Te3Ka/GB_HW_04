@@ -43,7 +43,7 @@ void PrintArray(int[] arrayPrint)
     }
 }
 
-Console.WriteLine("Программа запрашивает создание массива с заданным количеством элементов");
+Console.WriteLine("Программа запрашивает создание массива с введённым количеством элементов.");
 Console.Write("Введите количество элементов в массиве: ");
 int.TryParse(Console.ReadLine(), out int num);
 while (num <= 0)
