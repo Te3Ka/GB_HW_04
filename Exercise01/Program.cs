@@ -15,6 +15,7 @@ void Author()
     Console.WriteLine();
     Console.WriteLine("Программа создана Te3Ka_PaynE.");
     Console.WriteLine("E-mail: Mnement4813@yandex.ru");
+    Console.WriteLine();
 }
 
 // Метод возведения в степень b по основанию a.
