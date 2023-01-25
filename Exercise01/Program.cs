@@ -12,8 +12,32 @@
 //Метод с указанием автора
 void Author()
 {
+    Console.WriteLine();
     Console.WriteLine("Программа создана Te3Ka_PaynE.");
     Console.WriteLine("E-mail: Mnement4813@yandex.ru");
+}
+
+// Метод возведения в степень b по основанию a.
+int DegreeOfIncrease(int a, int b)
+{
+    if ((a < 0) || (b < 0))
+        return -1;
+    if (a == 0)
+        return 0;
+    if ((a > 0) && (b == 0))
+        return 1;
+    if ((a > 0) && (b > 0))
+    {
+        int pow = 1;
+        while (b > 0)
+        {
+            pow *= a;
+            b--;
+        }
+        return pow;
+    }
+    else
+        return -1;
 }
 
 //Получение чисел от пользователя.
@@ -35,3 +59,6 @@ while (B < 0)
     Console.Write("Введите показатель степени B = ");
     int.TryParse(Console.ReadLine(), out B);
 }
+
+Console.WriteLine($"Результат возведения в степень {B} по основанию {A} = {DegreeOfIncrease(A, B)}");
+Author();
