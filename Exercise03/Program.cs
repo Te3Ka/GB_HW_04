@@ -32,6 +32,7 @@ int[] GenerateArray(int num)
 //Печать массива на экран
 void PrintArray(int[] arrayPrint)
 {
+    Console.Write("Полученный массив: ");
     Console.Write("[");
     for (int index = 0; index < arrayPrint.Length; index++)
     {
@@ -52,6 +53,5 @@ while (num <= 0)
     int.TryParse(Console.ReadLine(), out num);
 }
 
-Console.WriteLine($"Полученный массив: {PrintArray(GenerateArray(num))}");
-
+PrintArray(GenerateArray(num));
 Author();
