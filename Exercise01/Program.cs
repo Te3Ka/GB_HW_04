@@ -15,3 +15,23 @@ void Author()
     Console.WriteLine("Программа создана Te3Ka_PaynE.");
     Console.WriteLine("E-mail: Mnement4813@yandex.ru");
 }
+
+//Получение чисел от пользователя.
+Console.WriteLine("Программа считает возведение в степень B по основанию A.");
+Console.Write("Введите основание A = ");
+int.TryParse(Console.ReadLine(), out int A);
+while (A < 0)
+{
+    Console.WriteLine("Число должно быть 0 или больше. Повторите ввод.");
+    Console.Write("Введите показатель степени A = ");
+    int.TryParse(Console.ReadLine(), out A);
+}
+
+Console.Write("Введите степень B = ");
+int.TryParse(Console.ReadLine(), out int B);
+while (B < 0)
+{
+    Console.WriteLine("Число должно быть 0 или больше. Повторите ввод.");
+    Console.Write("Введите показатель степени B = ");
+    int.TryParse(Console.ReadLine(), out B);
+}
