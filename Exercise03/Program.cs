@@ -18,7 +18,16 @@ void Author()
 }
 
 //Получение массива от пользователя
-
+int[] GenerateArray(int num)
+{
+    int[] array = new int[num];
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"Введите {i + 1}-й элемент массива: ");
+        int.TryParse(Console.ReadLine(), out array[i]);
+    }
+    return array;
+}
 
 //Печать массива на экран
 void PrintArray(int[] arrayPrint)
@@ -29,7 +38,7 @@ void PrintArray(int[] arrayPrint)
         if (index == (arrayPrint.Length - 1))
             Console.WriteLine($"{arrayPrint[index]}]");
         else
-            Console.WriteLine($"{arrayPrint[index]}, ");
+            Console.Write($"{arrayPrint[index]}, ");
     }
 }
 
@@ -43,4 +52,6 @@ while (num <= 0)
     int.TryParse(Console.ReadLine(), out num);
 }
 
-PrintArray(GenerateArray(num));
+Console.WriteLine($"Полученный массив: {PrintArray(GenerateArray(num))}");
+
+Author();
