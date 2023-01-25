@@ -17,6 +17,22 @@ void Author()
     Console.WriteLine();
 }
 
+//Получение массива от пользователя
+
+
+//Печать массива на экран
+void PrintArray(int[] arrayPrint)
+{
+    Console.Write("[");
+    for (int index = 0; index < arrayPrint.Length; index++)
+    {
+        if (index == (arrayPrint.Length - 1))
+            Console.WriteLine($"{arrayPrint[index]}]");
+        else
+            Console.WriteLine($"{arrayPrint[index]}, ");
+    }
+}
+
 Console.WriteLine("Программа запрашивает создание массива с заданным количеством элементов");
 Console.Write("Введите количество элементов в массиве: ");
 int.TryParse(Console.ReadLine(), out int num);
@@ -26,3 +42,5 @@ while (num <= 0)
                     + "Повторите ввод количества элементов массива:");
     int.TryParse(Console.ReadLine(), out num);
 }
+
+PrintArray(GenerateArray(num));
